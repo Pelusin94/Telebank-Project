@@ -5,7 +5,7 @@
 
 <nav class="navbar bg-dark navbar-dark">
 	<div class="container">
-	    <a href="" class="navbar-brand"><i class="fas fa-binoculars mr-2"></i> Pattern</a>
+	    <a href="" class="navbar-brand">Pattern</a>
 	</div>
 </nav>
 
@@ -22,7 +22,6 @@
         <div class="row d-flex justify-content-around">
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img class="card-img-top" src="imgs/pattern1.jpeg" alt="">
                     <div class="card-body">
                     	<img src="{% static 'images/excel.jpg' %}" class="cardfit">
                         <h5 class="card-title"><strong>Upload Data</strong></h5>
@@ -34,7 +33,6 @@
 
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img class="card-img-top" src="imgs/pattern2.jpeg" alt="">
                     <div class="card-body">
                     	<img src="{% static 'images/word.jpg' %}" class="cardfit">
                         <h5 class="card-title"><strong>Download Letter</strong></h5>
@@ -66,7 +64,7 @@
 					</div>
 					<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" name="uploaddata" value="clicked">Upload</button>
+					<button type="submit" class="btn btn-primary" name="uploaddata" value="clicked">Upload</button>
 					</div>
 				</form>		
 		</div>
