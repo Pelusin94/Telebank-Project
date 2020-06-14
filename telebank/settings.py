@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from django.urls import path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -77,9 +78,11 @@ WSGI_APPLICATION = 'telebank.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'default': {},
+    'miniprojects': {
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'MiniProjects',
+        'HOST': 'GREGORY-PC\\SQLEXPRESS'
     },
 }
 
@@ -128,10 +131,11 @@ STATICFILES_DIRS = [
 ]
 
 # MEDIA FILES
-
 MEDIA_URL = '/media/'
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
+
+
 
 
 

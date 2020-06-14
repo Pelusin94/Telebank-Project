@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from fulfilment import views as fviews
+from . import views
 
 urlpatterns = [
+    path('', views.main_page),
     path('admin/', admin.site.urls),
+    path('login/', views.user_login),
+    path('logout/', views.user_logout),
     path('fulfilment/', include('fulfilment.urls')),
 ]
